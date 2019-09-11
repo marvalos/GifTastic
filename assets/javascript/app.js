@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var movies = ["Moulin Rouge", "Clueless", "Mean Girls", "Drop Dead Fred", "Breakfast At Tiffanys", "Cruel intentions", "Donnie Darko", "A Night At The Roxbury"];
+    var movies = ["Toy Story", "Clueless", "Mean Girls", "The Dark Knight", "Reservoir Dogs", "A Goofy Movie", "Princess Mononoke", "Spirited Away"];
 
     // Add buttons for original movies array
     function renderButtons() {
@@ -15,9 +15,11 @@ $(document).ready(function () {
     $("#add-movie").on("click", function () {
         event.preventDefault();
         var movie = $("#movie-input").val().trim();
+        console.log(movie);
+        console.log(movies);
         movies.push(movie);
         renderButtons();
-        return;
+        // return;
     });
 
 
